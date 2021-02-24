@@ -35,4 +35,8 @@ public class WhiskyTrackerApplicationTests {
 //	Whisky whisky1 = new Whisky("The Glendronach Revival", 15, 2018, distillery1);
 //        whiskyRepository.save(whisky1);
 
+	@Test
+	public void canFindDistilleryByRegion(){
+		assertEquals(3, distilleryRepository.getByRegion("Highland").size());
+	}
 }
